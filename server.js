@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(uploadRoute)
-//app.use(filesRoute)
+app.use(filesRoute)
 app.use(deleteRoute)
 
 app.get( '/', (req, res) => {
