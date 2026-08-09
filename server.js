@@ -4,6 +4,7 @@ const cors = require('cors');
 const uploadRoute = require('./routes/upload.js');
 const filesRoute = require('./routes/files.js');
 const deleteRoute = require('./routes/delete.js');
+const authRoutes = require('./routes/authRoutes.js');
 
 const connectDB = require('./config/db.js');
 
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(uploadRoute)
 app.use(filesRoute)
 app.use(deleteRoute)
+app.use('/api/auth', authRoutes);
 
 connectDB();
 
