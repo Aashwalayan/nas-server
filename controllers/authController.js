@@ -105,11 +105,6 @@ const login = async (req, res) => {
 }
 
 
-module.exports = {
-    registerUser,
-    login
-};
-
 const verifyEmail = async (req, res) => {
     try {
         const { email, verificationCode } = req.body;
@@ -129,7 +124,7 @@ const verifyEmail = async (req, res) => {
         }
 
         if (
-            !userverificationCodeExpires ||
+            !user.verificationCodeExpires ||
             user.verificationCodeExpires < new Date()
         ) {
             return res.status(400).json({
@@ -162,6 +157,7 @@ const verifyEmail = async (req, res) => {
         });
     }
 };
+
 
 module.exports = {
     registerUser,
