@@ -26,7 +26,7 @@ const sendVerificationEmail = async (email, verificationCode) => {
 
                 <p>This code expires in 10 minutes.</p>
 
-                <p>If you didn't create a MyCloud account, you can ignore this email.</p>
+                <p>If this wasn't you, you can ignore this email.</p>
             </div>
         `,
     });
